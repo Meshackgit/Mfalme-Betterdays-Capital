@@ -19,7 +19,7 @@
     padding: 20px;
     color: #000;
     text-align: center;
-    border: 2px solid #a4c639; /* Thin border */
+    border: 2px solid #FFD700; /* Thin border */
     border-radius: 10px; /* Rounded edges */
 }
 
@@ -37,13 +37,4 @@
     margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .payment-option img {
-        width: 70px;
-        height: 70px;
-    }
-    @media screen and (max-width: 768px) {
-        .payment-option {
-            flex-basis: 80%; 
-        }
-}
+
