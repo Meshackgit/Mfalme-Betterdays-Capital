@@ -5,13 +5,6 @@
     padding: 20px;
 }
 
-.payment-options {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    color: #000;
-}
 
 .payment-option {
     flex: 1; /* Each option takes up equal space */
