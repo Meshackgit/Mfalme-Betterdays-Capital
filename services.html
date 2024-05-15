@@ -191,52 +191,74 @@
     <div class="payment-container">
       <h1>Payment Methods</h1>
       <p style="font-size: 20px;color: black;">All Proof Of Payment Must Be Sent Via Whatsapp 0706286667-Mfalme Betterdays Capital</p>
-      <div class="payment-options-wrapper" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        <div class="payment-options" style="flex: 0 1 45%; max-width: 50%; margin: 10px; display: flex; flex-direction: column;">
-          <div class="payment-option" style="margin-bottom: 20px;">
-            <img src="assets/images/mpesa-removebg-preview.png" alt="M-Pesa">
-            <p style="color: black; font-size: 20px;"> Paybill: 247247 <br> A/c No: 0706286667 <br> Till Number: 0706286667</p>
-            <p style="color: black; font-size: 20px; font-weight: bold;">Payment via M-PESA</p>
-           
-           
-          </div>
-          <div class="payment-option">
-            <img src="assets/images/bitm-removebg-preview.png" alt="Bitcoin">
-            <p  class="btc" style="color: black; font-size: 20px;"> Bitcoin Address: bc1qfdr3w9kqshrjhywj2kjmugww7lh2mvxpdvfqqn</p>
-            <p style="color: black; font-size: 20px; font-weight: bold;">Payment via Bitcoin</p>
-           
-          </div>
+      <div class="payment-options-wrapper">
+        <div class="payment-option">
+          <img src="assets/images/mpesa-removebg-preview.png" alt="M-Pesa">
+          <p style="color: black; font-size: 20px;"> Paybill: 247247 <br> A/c No: 1180284568232 <br></p>
+          <p style="color: black; font-size: 20px; font-weight: bold;">Payment via M-PESA</p>
         </div>
-        <div class="payment-options" style="flex: 0 1 45%; max-width: 50%; margin: 10px; display: flex; flex-direction: column;">
-          <div class="payment-option" style="margin-bottom: 20px;">
-            <img src="assets/images/usdt.png" alt="USDT">
-            <p style="color: black; font-size: 20px;"> USDT (TRC20) Address: TL7tx1WbQKR4mHwjViAf8Y6DKVsDXnzMmN</p>
-            <p style="color: black; font-size: 20px; font-weight: bold;">Payment via USDT (TRC20)</p>
-          </div>
-          <div class="payment-option">
-            <img src="assets/images/bank-removebg-preview.png" alt="Equity Bank">
-            <p style="color: black; font-size: 20px;"> A/c Name: MFALME BETTERDAYS CAPITAL <br> A/c No: 1180284568232 <br> Branch Code: 118 <br> Bank Code: 68 <br> Swift Code: EQDLKENA</p>
-            <p style="color: black; font-size: 20px; font-weight: bold;">Payment via Equity Bank</p>
-          
-           
-          </div>
+        <div class="payment-option">
+          <img src="assets/images/bitm-removebg-preview.png" alt="Bitcoin">
+          <button class="copy-button" onclick="copyToClipboard('bc1qfdr3w9kqshrjhywj2kjmugww7lh2mvxpdvfqqn')">Click to Copy Wallet ID</button>
+          <p style="color: black; font-size: 20px; font-weight: bold;">Payment via Bitcoin</p>
+        </div>
+        <div class="payment-option">
+          <img src="assets/images/usdt.png" alt="USDT">
+          <button class="copy-button" onclick="copyToClipboard('TL7tx1WbQKR4mHwjViAf8Y6DKVsDXnzMmN')">Click to Copy Wallet ID</button>
+          <p style="color: black; font-size: 20px; font-weight: bold;">Payment via USDT (TRC20)</p>
+        </div>
+        <div class="payment-option">
+          <img src="assets/images/bank-removebg-preview.png" alt="Equity Bank">
+          <p style="color: black; font-size: 20px;"> A/c Name: MFALME BETTERDAYS CAPITAL <br> A/c No: 1180284568232 <br> Branch Code: 118 <br> Bank Code: 68 <br> Swift Code: EQDLKENA</p>
+          <p style="color: black; font-size: 20px; font-weight: bold;">Payment via Equity Bank</p>
         </div>
       </div>
     </div>
-    
-    <style>
-      @media only screen and (max-width: 768px) {
-        .payment-options-wrapper {
-          flex-direction: column;
-        }
-    
-        .payment-options {
-          max-width: 100%;
-        }
-
-       
-      }
-    </style>
+ <style>
+  .payment-container {
+    text-align: center;
+  }
+  
+  .payment-options-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .payment-option {
+    margin: 10px;
+    padding: 20px; /* Equal padding on all sides */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .copy-button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .copy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .payment-option {
+      flex: 0 1 90%; /* Adjusting width on smaller screens */
+    }
+  
+    .copy-button {
+      padding: 5px 10px;
+    }
+  }
+  
+ </style>   
 
   <div class="callback-form contact-us">
     <div class="container">
@@ -473,6 +495,42 @@
           }
       }
     </script>
+
+     <script>
+        function copyToClipboard(text) {
+          const input = document.createElement('input');
+          input.value = text;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+          alert('Wallet ID copied to clipboard: ' + text);
+        }
+      </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/sms.js"></script>
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+
+    
+    </script>
+    
 
   </body>
 </html>
